@@ -24,13 +24,14 @@ resourceGenerators in Compile <+= Def.task {
 
 
 // maven publishing
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (version.value.trim.endsWith("SNAPSHOT"))
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases" at nexus + "service/local/staging/deploy/maven2")
-}
+// DISABLED FOR BINTRAY EXPERIMENTATION -- BRING SNAPSHOT PART back
+// publishTo := {
+//   val nexus = "https://oss.sonatype.org/"
+//   if (version.value.trim.endsWith("SNAPSHOT"))
+//     Some("snapshots" at nexus + "content/repositories/snapshots")
+//   else
+//     Some("releases" at nexus + "service/local/staging/deploy/maven2")
+// }
 
 publishMavenStyle := true
 
