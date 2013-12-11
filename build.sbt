@@ -20,7 +20,8 @@ licenses += ("BSD New", url("http://opensource.org/licenses/BSD-3-Clause"))
 
 bintraySettings
 
-bintrayOrganization in bintray := None
+// must come after bintraySettings, but does not work yet
+// bintrayOrganization in bintray := Some("scala")
 
 // must come after bintraySettings
 repository in bintray := "scala-milestones"
